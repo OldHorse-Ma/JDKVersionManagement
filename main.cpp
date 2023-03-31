@@ -1,11 +1,19 @@
 #include <cstdio>
+#include "cstdlib"
 #include "map"
 #include "string"
+#include "cstring"
 
 int main(int argn, char** argc) {
-    FILE *fp = fopen("jvs", "r");
+
+    char *jvmHome = getenv("JVM_HOME");
+    if (jvmHome == nullptr) {
+        printf("Set environment variable JVM_HOME firstly.\n");
+        return 0;
+    }
+
+    FILE *fp = fopen(strcat(jvmHome, "\\jvs"), "r");
     if (fp == nullptr) {
-        printf("%s", argc[0]);
         printf("Can not open file: jvs.\n");
         return 0;
     }

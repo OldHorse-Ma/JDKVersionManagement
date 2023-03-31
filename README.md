@@ -17,11 +17,13 @@ jdk 版本管理工具
 
 ## 使用
 
-1. 将jvm.exe添加到path
+1. 配置环境变量`JVM_HOME`的值为jvm.exe所在目录
 
-2. 编写jvs文件
+2. 将`JVM_HOME`添加到path
 
-3. ```powershell
+3. 在`JVM_HOME`目录下新建并编写jvs文件
+
+4. ```powershell
    # 以管理员方式运行
    jvm [name]
    ```
