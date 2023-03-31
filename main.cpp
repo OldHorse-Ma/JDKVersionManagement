@@ -3,7 +3,7 @@
 #include "string"
 
 int main(int argn, char** argc) {
-    FILE *fp = fopen("../jvs", "r");
+    FILE *fp = fopen("jvs", "r");
     if (fp == nullptr) {
         printf("%s", argc[0]);
         printf("Can not open file: jvs.\n");
